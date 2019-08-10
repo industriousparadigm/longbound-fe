@@ -5,7 +5,7 @@ import { Form } from 'semantic-ui-react'
 const Contact = () => {
   return (
     <div className="main">
-      <Form id="contact-form" size='massive'>
+      <Form id="contact-form" size='massive' action="mailto:dsgmcosta@gmail.com" >
         <Form.Group widths='equal'>
           <Form.Input fluid placeholder='your name' />
           <Form.Input fluid placeholder='your email address' required />

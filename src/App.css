@@ -29,6 +29,17 @@ h2 {
 
 #quote-box {
     padding: 10vh 0 5vh;
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+#quote-box p {
+    font-size: 1.3em;
+    transition: 1s;
+}
+
+.loading-spinner {
+    padding: 10vh 0 5vh;
 }
 
 #footer {
