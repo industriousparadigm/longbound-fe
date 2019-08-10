@@ -5,7 +5,6 @@ import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 
-
 const Quotes = () => {
   const quotesURL = 'https://longbound-cc2a.restdb.io/rest/quotes'
   const apiKey = process.env.REACT_APP_RESTDB_KEY
@@ -40,10 +39,17 @@ const Quotes = () => {
       width="130"
     />
     : (
-      <section id="quote-box">
-        <p>"{quote.quote}"</p>
-        <p><em>{quote.author}</em></p>
-        <Image src={refresh} size='mini' centered onClick={() => randomizeQuote(quotes)} />
+      <section>
+        <div id="quote-box">
+          <p>"{quote.quote}"</p>
+          <p><em>{quote.author}</em></p>
+        </div>
+        <Image
+          className='button-refresh'
+          src={refresh} size='mini'
+          centered
+          onClick={() => randomizeQuote(quotes)}
+        />
       </section>
     )
 }
