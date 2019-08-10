@@ -13,7 +13,7 @@ const Quotes = () => {
   const [quote, setQuote] = useState({})
 
   useEffect(() => {
-    fetch(quotesURL, {
+    !quotes && fetch(quotesURL, {
       headers: {
         'Content-Type': 'application/json',
         'x-apikey': apiKey
@@ -24,7 +24,7 @@ const Quotes = () => {
         setQuotes(quotes)
         randomizeQuote(quotes)
       })
-  }, [apiKey])
+  }, [apiKey, quotes])
 
   const randomizeQuote = quotes => {
     setQuote(quotes[Math.floor(Math.random() * quotes.length)])
