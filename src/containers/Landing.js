@@ -1,20 +1,23 @@
-import React, { Fragment } from 'react'
-import { Icon, Button } from 'semantic-ui-react'
+import React from 'react'
+import { Image, Header } from 'semantic-ui-react'
+import refresh from '../img/refresh.png'
 
 
 const Landing = () => {
   return (
-    <Fragment>
-      <h1>A creative R&D and Front-end Innovation team imagining and inventing a better future.</h1>
-      <section>
+    <div className="main">
+      <Header as='h1' className='section-header'>
+        A creative R&D and Front-end Innovation team imagining and inventing a better future.
+      </Header>
+
+      <section id="quote-box">
         <p>"Innovation is about changing reality. Creativity is about changing perception."</p>
         <p>Luc de Brabandere</p>
-        <Button color='black' icon>
-          <Icon name='refresh' />
-        </Button>
+        <Image src={refresh} size='mini' centered />
+
 
       </section>
-    </Fragment>
+    </div>
   )
 }
 

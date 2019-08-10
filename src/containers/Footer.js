@@ -2,7 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <h6>Footer with some copyright stuff</h6>
+    <div id="footer">
+      <p>Copyright &copy; 2019 Longbound
+      <br />All rights reserved.</p>
+    </div>
   )
 }
 

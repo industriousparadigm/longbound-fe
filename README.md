@@ -1,6 +1,6 @@
-## Longbound
+## Longbound website
 
-A creative R&D and Front-end Innovation team imagining and inventing a better future.
+Longbound is a creative R&D and Front-end Innovation team imagining and inventing a better future.
 
 ### Specs
 

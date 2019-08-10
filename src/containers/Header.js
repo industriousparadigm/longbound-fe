@@ -1,15 +1,39 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { Image, Menu } from 'semantic-ui-react'
+import logo from '../img/longbound-logo.png'
+import { Link } from 'react-router-dom'
 
-const Header = () => {
+
+const Header = props => {
   return (
-    <Fragment>
-      <h1>Big Longbound logo</h1>
-      <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contacts</li>
-      </ul>
-    </Fragment>
+    <div id="header">
+      <Image
+        src={logo}
+        size='medium'
+        floated='left'
+        as={Link}
+        to='/'
+      />
+      <Menu id='menu' secondary float='right' size='massive'>
+        <Menu.Menu position='right'>
+          <Menu.Item
+            name='About'
+            as={Link}
+            to="/about"
+          />
+          <Menu.Item
+            name='Projects'
+            as={Link}
+            to='/projects'
+          />
+          <Menu.Item
+            name='Contact'
+            as={Link}
+            to='/contact'
+          />
+        </Menu.Menu>
+      </Menu>
+    </div>
   )
 }
 
