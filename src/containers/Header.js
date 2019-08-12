@@ -9,8 +9,9 @@ const Header = props => {
     <div id="header">
       <Image
         src={logo}
-        size='medium'
         floated='left'
+        fluid
+        size='medium'
         as={Link}
         to='/'
       />
