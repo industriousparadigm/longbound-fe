@@ -12,12 +12,13 @@
     text-align: center;
 }
 
-/* #menu {
-    padding: 7vh 5vw 0;
-} */
+#menu a {
+    display: block;
+}
 
-#menu ul {
-    list-style: none;
+.menu-option {
+    font-size: 4vh;
+    padding: 1vh 0;
 }
 
 #longbound-logo {

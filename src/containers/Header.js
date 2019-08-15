@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from '../img/longbound-logo.png'
 import { Link } from 'react-router-dom'
+import { Icon } from 'semantic-ui-react'
+
 
 
 const Header = props => {
@@ -13,12 +15,15 @@ const Header = props => {
           src={logo}
         />
       </Link>
+      <div id="menu-toggle">
+        <Icon name='circle' />
+        <Icon name='circle' />
+        <Icon name='circle' />
+      </div>
       <div id='menu'>
-        <ul>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
+        <Link className="menu-option" to="/about">About</Link>
+        <Link className="menu-option" to="/projects">Projects</Link>
+        <Link className="menu-option" to="/contact">Contact</Link>
       </div>
     </div>
   )
