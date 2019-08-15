@@ -10,7 +10,7 @@ const Contact = () => {
         size='big'
         name="lb-contact"
         method='POST'
-        netlify
+        data-netlify="true"
       >
         <Form.Group widths='equal' name="deets" >
           <Form.Input fluid placeholder='your name' type='text' name="name" />

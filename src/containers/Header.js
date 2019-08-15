@@ -14,25 +14,13 @@ const Header = props => {
         as={Link}
         to='/'
       />
-      <Menu id='menu' secondary float='right' size='massive'>
-        <Menu.Menu position='right'>
-          <Menu.Item
-            name='About'
-            as={Link}
-            to="/about"
-          />
-          <Menu.Item
-            name='Projects'
-            as={Link}
-            to='/projects'
-          />
-          <Menu.Item
-            name='Contact'
-            as={Link}
-            to='/contact'
-          />
-        </Menu.Menu>
-      </Menu>
+      <div id='menu' secondary float='right' size='massive'>
+        <ul position='right'>
+          <li as={Link} to="/about">About</li>
+          <li as={Link} to='/projects'>Projects</li>
+          <li as={Link} to='/contact'>Contact</li>
+        </ul>
+      </div>
     </div>
   )
 }
