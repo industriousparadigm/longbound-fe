@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form } from 'semantic-ui-react'
+import { Form, Button } from 'semantic-ui-react'
 
 
 const Contact = () => {
@@ -24,7 +24,7 @@ const Contact = () => {
           <Form.Input fluid placeholder='your email address' required type='email' name="email" />
         </Form.Group>
         <Form.TextArea placeholder='your message' rows={10} name="message" required />
-        <Form.Button fluid color='black' size='big'>Submit</Form.Button>
+        <Button fluid type="submit" color='black' size='big'>Submit</Button>
       </Form>
     </div>
 
