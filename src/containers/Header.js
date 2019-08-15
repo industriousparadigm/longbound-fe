@@ -7,11 +7,10 @@ import { Link } from 'react-router-dom'
 const Header = props => {
   return (
     <div id="header">
-      <Image
+      <img
+        id="longbound-logo"
+        alt="longbound logo"
         src={logo}
-        floated='left'
-        fluid
-        size='medium'
         as={Link}
         to='/'
       />

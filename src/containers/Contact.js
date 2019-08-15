@@ -12,7 +12,7 @@ const Contact = () => {
         method='POST'
         netlify
       >
-        <Form.Group widths='equal'>
+        <Form.Group widths='equal' name="deets" >
           <Form.Input fluid placeholder='your name' type='text' name="name" />
           <Form.Input fluid placeholder='your email address' required type='email' name="email" />
         </Form.Group>
