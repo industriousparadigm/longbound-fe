@@ -1,5 +1,6 @@
 #header {
-    height: 22vh;
+    height: 28vh;
+    text-align: center;
 }
 
 .main {
@@ -11,12 +12,16 @@
     text-align: center;
 }
 
-#menu {
+/* #menu {
     padding: 7vh 5vw 0;
+} */
+
+#menu ul {
+    list-style: none;
 }
 
 #longbound-logo {
-    max-width: 20%;
+    max-width: 30%;
     height: auto;
 }
 
@@ -26,10 +31,6 @@ h1 {
 
 h2 {
     font-size: 2.5vw !important;
-}
-
-.section-header {
-    padding-top: 6vh !important;
 }
 
 #quote-box {
