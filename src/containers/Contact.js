@@ -27,7 +27,6 @@ const Contact = () => {
         <Button fluid type="submit" color='black' size='big'>Submit</Button>
       </Form>
     </div>
-
   )
 }
 
