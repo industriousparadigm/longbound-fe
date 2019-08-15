@@ -97,7 +97,7 @@ h2 {
 
 .name-tag {
     display: inline-block;
-    padding-bottom: 5vh;
+    padding: 0 5vh 5vh;
 }
 
 .body-text {
