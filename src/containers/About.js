@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header, Image } from 'semantic-ui-react'
-import schema from '../img/key activities.png'
+import schema from '../img/key activities crop.png'
 import faces from '../img/faces.png'
 
 
@@ -11,8 +11,8 @@ const About = () => {
         Creative solutions are not stumbled upon by accident, nor realized by lone geniuses. They come from synergistic teams that apply the right methods and attitudes.
       </Header>
 
-      <Image src={schema} />
-      <Image src={faces} id="faces-picture" />
+      <Image src={schema} id="schema-picture" className="body-image" alt="Longbound methodology" />
+      <Image src={faces} id="faces-picture" className="body-image" alt="Longbound Bros" />
       <div id="name-tags">
         <div className="name-tag">
           <Header as='h3'>

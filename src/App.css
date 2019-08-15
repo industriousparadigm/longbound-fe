@@ -1,10 +1,10 @@
 #header {
-    min-height: 28vh;
+    min-height: 25vh;
     text-align: center;
 }
 
 .main {
-    width: 80%;
+    width: 90%;
 }
 
 .main, #footer {
@@ -12,8 +12,35 @@
     text-align: center;
 }
 
+#footer {
+    padding: 8vh 0 3vh;
+}
+
+#footer p {
+    font-size: 2.5vw
+}
+
+#menu {
+    padding-top: 0;
+    padding-bottom: 5vh;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#menu-toggle {
+    padding: 3vh 0;
+}
+
 #menu a {
-    display: block;
+    margin: 1vh;
+    color: #555;
+}
+
+#menu a:hover {
+    color: black;
 }
 
 .menu-option {
@@ -22,46 +49,44 @@
 }
 
 #longbound-logo {
-    max-width: 30%;
+    max-width: 80%;
     height: auto;
+    max-height: 300px;
 }
 
 h1 {
-    font-size: 3vw !important;
+    font-size: 6vw !important;
+    margin-bottom: 6vh !important;
 }
 
 h2 {
-    font-size: 2.5vw !important;
+    font-size: 5vw !important;
+    margin-bottom: 5vh !important;
 }
 
 #quote-box {
-    padding: 10vh 0 5vh;
+    padding-bottom: 5vh;
     margin: 0 auto;
     max-width: 60%;
-    min-height: 30vh;
 }
 
-#quote-box p {
-    font-size: 1.5vw;
+.body-image {
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 5vh;
 }
 
 .loading-spinner {
-    padding: 10vh 0 5vh;
+    padding-bottom: 5vh;
 }
 
-#footer {
-    padding: 5vh 0 3vh;
-}
-
-#faces-picture {
-    margin: 0 auto;
-    width: 60%;
+#schema-picture {
+    width: 100%;
 }
 
 #contact-form {
     margin: 0 auto;
-    width: 60%;
-    padding-top: 5vh;
+    width: 80%;
 }
 
 #name-tags {
@@ -72,15 +97,14 @@ h2 {
 
 .name-tag {
     display: inline-block;
-    padding: 5vh 5vw;
+    padding-bottom: 5vh;
 }
 
 .body-text {
     margin: 0 auto;
-    width: 60%;
+    text-align: left;
 }
 
-.body-text p {
-    font-size: 1.2vw;
-    text-align: left;
+p {
+    font-size: 3vw;
 }
