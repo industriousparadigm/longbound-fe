@@ -20,11 +20,35 @@ const Contact = () => {
           {/* hidden input for Netlify */}
           <input type="hidden" name="form-name" value="contact" />
 
-          <Form.Input fluid placeholder='your name' type='text' name="name" />
-          <Form.Input fluid placeholder='your email address' required type='email' name="email" />
+          <Form.Input
+            fluid
+            placeholder='your name'
+            type='text'
+            name="name"
+          />
+          <Form.Input
+            fluid
+            placeholder='your email address'
+            required
+            type='email'
+            name="email"
+          />
         </Form.Group>
-        <Form.TextArea placeholder='your message' rows={10} name="message" required />
-        <button className="fluid ui button black big" type="submit">Send</button>
+        <Form.TextArea
+          placeholder='your message'
+          rows={10}
+          name="message"
+          required
+        />
+        <Button
+          fluid
+          type="submit"
+          color='black'
+          size='big'
+        >
+          Submit
+        </Button>
+        <br />
       </Form>
     </div>
   )
