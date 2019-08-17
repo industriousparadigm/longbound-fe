@@ -40,14 +40,12 @@ const Contact = () => {
           name="message"
           required
         />
-        <Button
-          fluid
+        <button
           type="submit"
-          color='black'
-          size='big'
+          className="fluid ui big black button"
         >
           Submit
-        </Button>
+        </button>
         <br />
       </Form>
     </div>
