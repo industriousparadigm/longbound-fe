@@ -1,5 +1,14 @@
+/* .side-text {
+    position: absolute;
+    top: 20vh;
+    left: -1.3rem;
+    margin: 0;
+    writing-mode: vertical-lr;
+    font-size: 5vh;
+} */
+  
 #header {
-    min-height: 25vh;
+    height: auto;
     text-align: center;
 }
 
@@ -10,6 +19,7 @@
 .main, #footer {
     margin: 0 auto;
     text-align: center;
+    margin-top: 8vh;
 }
 
 #footer {
@@ -21,8 +31,7 @@
 }
 
 #menu {
-    padding-top: 0;
-    padding-bottom: 5vh;
+    padding-top: 2vh;
     display: flex;
     height: auto;
     justify-content: center;
@@ -31,16 +40,16 @@
 }
 
 #menu-toggle {
-    padding: 3vh 0;
+    padding-top: 3vh;
 }
 
 #menu a {
     margin: 1vh;
-    color: #555;
+    color: black;
 }
 
 #menu a:hover {
-    color: black;
+    color: #555;
 }
 
 .menu-option {
@@ -90,9 +99,10 @@ h2 {
 }
 
 #name-tags {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
     margin: 0 auto;
-    width: 40%;
-    min-width: 400px;
 }
 
 .name-tag {
@@ -107,4 +117,77 @@ h2 {
 
 p {
     font-size: 3vw;
+}
+
+@media only screen and (min-width: 576px) {
+    h1 {
+        font-size: 5.5vh !important;
+        margin-bottom: 5.5vh !important;
+    }
+
+    h2 {
+        font-size: 4vh !important;
+        margin-bottom: 5vh !important;
+    }
+
+    p {
+        font-size: 2.2vh;
+    }
+
+    .main {
+        width: 67%;
+    }
+    
+    #footer p {
+        font-size: 1.8vh
+    }
+
+    #header {
+        text-align: center;
+    }
+    
+    #desktop-menu {
+        display: flex;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    #desktop-menu a {
+        margin: 1vw;
+        color: black;
+    }
+    
+    #desktop-menu a:hover {
+        color: #555;
+    }
+
+    #menu-options {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        padding-right: 4vw;
+    }
+    
+    .menu-option {
+        font-size: 3vh;
+    }
+
+    #logo-box {
+        text-align: left;
+        padding-left: 4vw;
+        width: 35vw;
+    }
+    
+    #longbound-logo-desktop {
+        height: auto;
+        max-height: 20vh;
+    }    
+}
+
+@media only screen and (min-width: 1200px) {
+    html, body {
+        margin: 0 auto;
+        max-width: 1300px;
+    }
+
 }

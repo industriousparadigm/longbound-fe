@@ -2,11 +2,13 @@ import React from 'react'
 import { Header, Image } from 'semantic-ui-react'
 import schema from '../img/key activities crop.png'
 import faces from '../img/faces.png'
+// import SideText from './SideText'
 
 
 const About = () => {
   return (
     <div className="main">
+      {/* <SideText text="Who we are" /> */}
       <Header as='h2' className='section-header'>
         Creative solutions are not stumbled upon by accident, nor realized by lone geniuses. They come from synergistic teams that apply the right methods and attitudes.
       </Header>

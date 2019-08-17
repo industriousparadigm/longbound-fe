@@ -24,7 +24,7 @@ const Contact = () => {
           <Form.Input fluid placeholder='your email address' required type='email' name="email" />
         </Form.Group>
         <Form.TextArea placeholder='your message' rows={10} name="message" required />
-        <Button fluid type="submit" color='black' size='big'>Submit</Button>
+        <button className="fluid ui button black big" type="submit">Send</button>
       </Form>
     </div>
   )

@@ -24,46 +24,10 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- A little help for the Netlify post-processing bots -->
-    <form
-      id="contact-form"
-      name="contact"
-      netlify
-      netlify-honeypot="bot-field"
-      hidden
-      class="ui big form"
-    >
-      <p>
-        You can get in touch using <strong>team[at]longbound[dot]com</strong> or
-        via the form below.
-      </p>
-      <br />
-      <div name="deets" class="equal width fields">
-        <input type="hidden" name="form-name" value="contact" />
-        <div class="field">
-          <div class="ui fluid input">
-            <input placeholder="your name" name="name" type="text" />
-          </div>
-        </div>
-        <div class="required field">
-          <div class="ui fluid input">
-            <input
-              placeholder="your email address"
-              name="email"
-              required=""
-              type="email"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="required field">
-        <textarea
-          placeholder="your message"
-          name="message"
-          required=""
-          rows="10"
-        ></textarea>
-      </div>
-      <button type="submit" class="ui black big fluid button">Submit</button>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
     </form>
     <div id="root"></div>
     <!--
