@@ -44,15 +44,16 @@ const Contact = () => {
         </button> */}
       <form
         id="contact-form"
-        size='big'
         name="contact"
-        method='POST'
-        data-netlify="true"
+        method='post'
       >
         <p>
           You can get in touch using <strong>team[at]longbound[dot]com</strong> or via the form below.
         </p>
         <br />
+
+        {/* Hidden input for netlify */}
+        <input type="hidden" name="form-name" value="contact" />
 
         <div class="row">
           <div class="input-field col s6">
