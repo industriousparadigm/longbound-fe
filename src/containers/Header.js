@@ -14,6 +14,24 @@ const Header = props => {
 
   const toggleMenu = () => setShowMenu(!showMenu)
 
+  const Menu = ({ isMobile }) =>
+    <div id={isMobile ? 'menu' : 'menu-options'}>
+      <Link
+        className={activeSection === "About" ? "selected menu-option" : "menu-option"}
+        to="/about"
+        onClick={handleMenuClick}
+      >About</Link>
+      <Link
+        className={activeSection === "Projects" ? "selected menu-option" : "menu-option"}
+        to="/projects"
+        onClick={handleMenuClick}
+      >Work</Link>
+      <Link
+        className={activeSection === "Contact" ? "selected menu-option" : "menu-option"}
+        to="/contact"
+        onClick={handleMenuClick}>Contact</Link>
+    </div>
+
   return (
     <div id="header">
       <Breakpoint small down>
@@ -31,22 +49,7 @@ const Header = props => {
         </div>
 
         {
-          showMenu && <div id='menu'>
-            <Link
-              className={activeSection === "About" ? "selected menu-option" : "menu-option"}
-              to="/about"
-              onClick={handleMenuClick}
-            >About</Link>
-            <Link
-              className={activeSection === "Projects" ? "selected menu-option" : "menu-option"}
-              to="/projects"
-              onClick={handleMenuClick}
-            >Projects</Link>
-            <Link
-              className={activeSection === "Contact" ? "selected menu-option" : "menu-option"}
-              to="/contact"
-              onClick={handleMenuClick}>Contact</Link>
-          </div>
+          showMenu && <Menu isMobile={true} />
         }
       </Breakpoint>
       <Breakpoint medium up>
@@ -60,23 +63,7 @@ const Header = props => {
               />
             </Link>
           </div>
-          <div id="menu-options">
-            <Link
-              className={activeSection === "About" ? "selected menu-option" : "menu-option"}
-              to="/about"
-              onClick={handleMenuClick}
-            >About</Link>
-            <Link
-              className={activeSection === "Projects" ? "selected menu-option" : "menu-option"}
-              to="/projects"
-              onClick={handleMenuClick}
-            >Projects</Link>
-            <Link
-              className={activeSection === "Contact" ? "selected menu-option" : "menu-option"}
-              to="/contact"
-              onClick={handleMenuClick}
-            >Contact</Link>
-          </div>
+          <Menu isMobile={false} />
         </div>
       </Breakpoint>
     </div>
