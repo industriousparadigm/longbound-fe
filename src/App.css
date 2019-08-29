@@ -6,7 +6,7 @@
     writing-mode: vertical-lr;
     font-size: 5vh;
 } */
-  
+
 #header {
     height: auto;
     text-align: center;
@@ -27,7 +27,7 @@
 }
 
 #footer p {
-    font-size: 2.5vw
+    font-size: 2.5vw;
 }
 
 #menu {
@@ -119,6 +119,31 @@ p {
     font-size: 3vw;
 }
 
+textarea.materialize-textarea {
+    height: 12rem;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+    color: #000 !important;
+}
+
+/* label underline focus color */
+.input-field input:focus {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000 !important;
+}
+
+.input-field textarea:focus + label {
+    color: #000 !important;
+}
+
+/* label underline focus color */
+.input-field textarea:focus {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000 !important;
+}
+
 @media only screen and (min-width: 576px) {
     h1 {
         font-size: 5.5vh !important;
@@ -137,26 +162,26 @@ p {
     .main {
         width: 67%;
     }
-    
+
     #footer p {
-        font-size: 1.8vh
+        font-size: 1.8vh;
     }
 
     #header {
         text-align: center;
     }
-    
+
     #desktop-menu {
         display: flex;
         height: auto;
         justify-content: space-between;
     }
-    
+
     #desktop-menu a {
         margin: 1vw;
         color: black;
     }
-    
+
     #desktop-menu a:hover {
         color: #555;
     }
@@ -167,7 +192,7 @@ p {
         align-items: center;
         padding-right: 4vw;
     }
-    
+
     .menu-option {
         font-size: 3vh;
     }
@@ -177,11 +202,11 @@ p {
         padding-left: 4vw;
         width: 35vw;
     }
-    
+
     #longbound-logo-desktop {
         height: auto;
         max-height: 20vh;
-    }    
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -189,5 +214,4 @@ p {
         margin: 0 auto;
         max-width: 1300px;
     }
-
 }
