@@ -3,43 +3,6 @@ import React from 'react'
 const Contact = () => {
   return (
     <div className="main">
-      {/* <Form
-        id="contact-form"
-        size='big'
-        name="contact"
-        method='POST'
-        data-netlify="true"
-      > */}
-
-      {/* <Form.Group widths='equal' name="deets" >
-          <input type="hidden" name="form-name" value="contact" />
-
-          <Form.Input
-            fluid
-            placeholder='your name'
-            type='text'
-            name="name"
-          />
-          <Form.Input
-            fluid
-            placeholder='your email address'
-            required
-            type='email'
-            name="email"
-          />
-        </Form.Group>
-        <Form.TextArea
-          placeholder='your message'
-          rows={10}
-          name="message"
-          required
-        />
-        <button
-          type="submit"
-          className="fluid ui big black button"
-        >
-          Submit
-        </button> */}
       <form
         id="contact-form"
         name="contact"
@@ -53,29 +16,29 @@ const Contact = () => {
         {/* Hidden input for netlify */}
         <input type="hidden" name="form-name" value="contact" />
 
-        <div class="row">
-          <div class="input-field col s6">
+        <div className="row">
+          <div className="input-field col s6">
             <input type='text' name="name" />
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
           </div>
-          <div class="input-field col s6">
+          <div className="input-field col s6">
             <input required type='email' name="email" />
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
+        <div className="row">
+          <div className="input-field col s12">
             <textarea className="materialize-textarea"
               rows={10}
               name="message"
               required
             >
             </textarea>
-            <label for="message">Your message</label>
+            <label htmlFor="message">Your message</label>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
+        <div className="row">
+          <div className="input-field col s12">
 
             <button
               type="submit"

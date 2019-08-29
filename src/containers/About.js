@@ -2,10 +2,8 @@ import React from 'react'
 import { Header, Image } from 'semantic-ui-react'
 import schema from '../img/key activities crop.png'
 import faces from '../img/faces.png'
-// import SideText from './SideText'
 
-
-const About = () => {
+const About = ({ aboutScrollHandler }) => {
   return (
     <div className="main">
       {/* <SideText text="Who we are" /> */}
@@ -14,21 +12,24 @@ const About = () => {
       </Header>
 
       <Image src={schema} id="schema-picture" className="body-image" alt="Longbound methodology" />
-      <Image src={faces} id="faces-picture" className="body-image" alt="Longbound Bros" />
-      <div id="name-tags">
+      <Image
+        src={faces}
+        id="faces-picture"
+        className="body-image"
+        alt="Longbound Bros"
+      />
+      <div onScroll={aboutScrollHandler} id="name-tags">
         <div className="name-tag">
-          <Header as='h3'>
+          <Header as='h3' style={{ "marginBottom": "0.6vh" }}>
             Bernardo
-            <br />
-            <span> <em>designer</em> </span>
           </Header>
+          <span> <em>designer</em> </span>
         </div>
         <div className="name-tag">
-          <Header as='h3'>
+          <Header as='h3' style={{ "marginBottom": "0.6vh" }}>
             Diogo
-            <br />
-            <span> <em>engineer</em> </span>
           </Header>
+          <span> <em>engineer</em> </span>
         </div>
       </div>
 
@@ -52,24 +53,22 @@ const About = () => {
       </section>
 
       <br />
-      <Header as='h2' className='section-header' style={{ "margin-top": "6vh" }}>
+      <Header as='h2' className='section-header' style={{ "marginTop": "6vh" }}>
         Longbound helps people and organizations to become more innovative by identifying, creating and realizing growth opportunities through innovation.
       </Header>
 
-      <section className="body-text">
-        <p>
-          <ol>
-            <li>Improve systems, products and/or services
+      <section className="about-list">
+        <ol>
+          <li>Improve systems, products and/or services
             <ol type="a">
-                <li>Solve “unsolvable problems”</li>
-                <li>Expose and resolve bottlenecks and failures</li>
-                <li>Reduce costs</li>
-              </ol>
-            </li>
-            <li>Develop new innovative concepts and new market segments</li>
-            <li>Forecast the evolution of products, services and technologies</li>
-          </ol>
-        </p>
+              <li>Solve “unsolvable problems”</li>
+              <li>Expose and resolve bottlenecks and failures</li>
+              <li>Reduce costs</li>
+            </ol>
+          </li>
+          <li>Develop new innovative concepts and new market segments</li>
+          <li>Forecast the evolution of products, services and technologies</li>
+        </ol>
       </section>
     </div>
   )

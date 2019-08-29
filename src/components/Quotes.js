@@ -35,8 +35,8 @@ const Quotes = () => {
       className="loading-spinner"
       type="TailSpin"
       color="#444"
-      height="130"
-      width="130"
+      height={130}
+      width={130}
     />
     : (
       <section>

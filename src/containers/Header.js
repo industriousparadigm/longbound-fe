@@ -4,30 +4,29 @@ import { Link } from 'react-router-dom'
 import { Icon } from 'semantic-ui-react'
 import { Breakpoint } from 'react-socks'
 
-const Header = props => {
+const Header = ({ handleMenuClick, activeSection }) => {
   const [showMenu, setShowMenu] = useState(false)
-  const [activeSection, setActiveSection] = useState(null)
-
-  const handleMenuClick = ({ target }) => {
-    setActiveSection(target.text)
-  }
 
   const toggleMenu = () => setShowMenu(!showMenu)
+
+  const getMenuOptionClass = sectionName => {
+    return activeSection === sectionName ? "selected menu-option" : "menu-option"
+  }
 
   const Menu = ({ isMobile }) =>
     <div id={isMobile ? 'menu' : 'menu-options'}>
       <Link
-        className={activeSection === "About" ? "selected menu-option" : "menu-option"}
+        className={getMenuOptionClass("About")}
         to="/about"
         onClick={handleMenuClick}
       >About</Link>
       <Link
-        className={activeSection === "Projects" ? "selected menu-option" : "menu-option"}
-        to="/projects"
+        className={getMenuOptionClass("Work")}
+        to="/work"
         onClick={handleMenuClick}
       >Work</Link>
       <Link
-        className={activeSection === "Contact" ? "selected menu-option" : "menu-option"}
+        className={getMenuOptionClass("Contact")}
         to="/contact"
         onClick={handleMenuClick}>Contact</Link>
     </div>
