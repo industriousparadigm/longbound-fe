@@ -50,11 +50,16 @@
 
 #menu a:hover {
     color: #555;
+    text-decoration: underline !important;
 }
 
 .menu-option {
     font-size: 4vh;
     padding: 1vh 0;
+}
+
+.selected {
+    text-decoration: underline;
 }
 
 #longbound-logo {
@@ -183,7 +188,8 @@ textarea.materialize-textarea {
     }
 
     #desktop-menu a:hover {
-        color: #555;
+        color: #333;
+        text-decoration: underline;
     }
 
     #menu-options {

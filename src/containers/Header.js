@@ -6,13 +6,18 @@ import { Breakpoint } from 'react-socks'
 
 const Header = props => {
   const [showMenu, setShowMenu] = useState(false)
+  const [activeSection, setActiveSection] = useState(null)
+
+  const handleMenuClick = ({ target }) => {
+    setActiveSection(target.text)
+  }
 
   const toggleMenu = () => setShowMenu(!showMenu)
 
   return (
     <div id="header">
       <Breakpoint small down>
-        <Link to='/'>
+        <Link to='/' onClick={handleMenuClick}>
           <img
             id="longbound-logo"
             alt="longbound logo"
@@ -27,16 +32,27 @@ const Header = props => {
 
         {
           showMenu && <div id='menu'>
-            <Link className="menu-option" to="/about">About</Link>
-            <Link className="menu-option" to="/projects">Projects</Link>
-            <Link className="menu-option" to="/contact">Contact</Link>
+            <Link
+              className={activeSection === "About" ? "selected menu-option" : "menu-option"}
+              to="/about"
+              onClick={handleMenuClick}
+            >About</Link>
+            <Link
+              className={activeSection === "Projects" ? "selected menu-option" : "menu-option"}
+              to="/projects"
+              onClick={handleMenuClick}
+            >Projects</Link>
+            <Link
+              className={activeSection === "Contact" ? "selected menu-option" : "menu-option"}
+              to="/contact"
+              onClick={handleMenuClick}>Contact</Link>
           </div>
         }
       </Breakpoint>
       <Breakpoint medium up>
         <div id="desktop-menu">
           <div id="logo-box">
-            <Link to='/'>
+            <Link to='/' onClick={handleMenuClick}>
               <img
                 id="longbound-logo-desktop"
                 alt="longbound logo"
@@ -45,9 +61,21 @@ const Header = props => {
             </Link>
           </div>
           <div id="menu-options">
-            <Link className="menu-option" to="/about">About</Link>
-            <Link className="menu-option" to="/projects">Projects</Link>
-            <Link className="menu-option" to="/contact">Contact</Link>
+            <Link
+              className={activeSection === "About" ? "selected menu-option" : "menu-option"}
+              to="/about"
+              onClick={handleMenuClick}
+            >About</Link>
+            <Link
+              className={activeSection === "Projects" ? "selected menu-option" : "menu-option"}
+              to="/projects"
+              onClick={handleMenuClick}
+            >Projects</Link>
+            <Link
+              className={activeSection === "Contact" ? "selected menu-option" : "menu-option"}
+              to="/contact"
+              onClick={handleMenuClick}
+            >Contact</Link>
           </div>
         </div>
       </Breakpoint>
