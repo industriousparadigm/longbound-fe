@@ -1,12 +1,11 @@
 import React from 'react'
-import { Header, Image } from 'semantic-ui-react'
-import compiling from '../img/compiling.png'
+import { Header } from 'semantic-ui-react'
 
 
 const Work = () => {
   return (
     <div className="main">
-      <Header as='h2' className='section-header' style={{ "marginTop": "6vh" }}>
+      <Header as='h2' className='section-header'>
         Longbound helps people and organizations to become more innovative by identifying, creating and realizing growth opportunities through innovation.
       </Header>
 
