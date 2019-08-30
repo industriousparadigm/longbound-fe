@@ -10,7 +10,7 @@ import Contact from './containers/Contact'
 import Work from './containers/Work'
 import SideText from './containers/SideText'
 import NotFound from './containers/NotFound'
-import FormSent from './containers/NotFound'
+import FormSent from './containers/FormSent'
 
 import './App.css'
 
