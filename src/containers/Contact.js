@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const Contact = () => {
+const Contact = ({ setActiveSection }) => {
+
+  useEffect(() => {
+    setActiveSection("Contact")
+  }, [setActiveSection])
+
   return (
     <div className="main">
       <form

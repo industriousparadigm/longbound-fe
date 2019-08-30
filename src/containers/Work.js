@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Header } from 'semantic-ui-react'
 
 
-const Work = () => {
+const Work = ({ setActiveSection }) => {
+  useEffect(() => {
+    setActiveSection("Work")
+  }, [setActiveSection])
+
   return (
     <div className="main">
       <Header as='h2' className='section-header'>

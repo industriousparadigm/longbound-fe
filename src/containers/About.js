@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Header, Image } from 'semantic-ui-react'
 import schema from '../img/key activities crop.png'
 import faces from '../img/faces.png'
 
-const About = ({ aboutScrollHandler }) => {
+const About = ({ setActiveSection }) => {
+
+  useEffect(() => {
+    setActiveSection("About")
+  }, [setActiveSection])
+
   return (
     <div className="main">
       <Header as='h2' className='section-header'>
@@ -17,7 +22,7 @@ const About = ({ aboutScrollHandler }) => {
         className="body-image"
         alt="Longbound Bros"
       />
-      <div onScroll={aboutScrollHandler} id="name-tags">
+      <div id="name-tags">
         <div className="name-tag">
           <Header as='h3' style={{ "marginBottom": "0.6vh" }}>
             Bernardo

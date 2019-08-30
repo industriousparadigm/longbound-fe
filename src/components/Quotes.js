@@ -5,26 +5,12 @@ import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 
-const Quotes = () => {
-  const quotesURL = 'https://longbound-cc2a.restdb.io/rest/quotes'
-  const apiKey = process.env.REACT_APP_RESTDB_KEY
-
-  const [quotes, setQuotes] = useState(null)
+const Quotes = ({ quotes }) => {
   const [quote, setQuote] = useState({})
 
   useEffect(() => {
-    !quotes && fetch(quotesURL, {
-      headers: {
-        'Content-Type': 'application/json',
-        'x-apikey': apiKey
-      }
-    })
-      .then(res => res.json())
-      .then(quotes => {
-        setQuotes(quotes)
-        randomizeQuote(quotes)
-      })
-  }, [apiKey, quotes])
+    quotes && randomizeQuote(quotes)
+  }, [quotes])
 
   const randomizeQuote = quotes => {
     setQuote(quotes[Math.floor(Math.random() * quotes.length)])
