@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { BreakpointProvider, Breakpoint } from 'react-socks';
+// import { setDefaultBreakpoints } from 'react-socks';
 
 import Header from './containers/Header'
 import Footer from './containers/Footer'
@@ -13,7 +14,14 @@ import NotFound from './containers/NotFound'
 
 import './App.css'
 
-const quotesURL = 'https://longbound-cc2a.restdb.io/rest/quotes'
+// setDefaultBreakpoints([
+//   { small: 100 },
+//   { medium: 376 },
+//   { large: 576 }
+// ]);
+
+
+const quotesURL = 'https://longbound-aff6.restdb.io/rest/quotes'
 const apiKey = process.env.REACT_APP_RESTDB_KEY
 
 

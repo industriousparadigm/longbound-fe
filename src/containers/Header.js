@@ -2,7 +2,14 @@ import React, { useState } from 'react'
 import logo from '../img/longbound-logo.png'
 import { Link } from 'react-router-dom'
 import { Icon } from 'semantic-ui-react'
-import { Breakpoint } from 'react-socks'
+import { Breakpoint, setDefaultBreakpoints } from 'react-socks'
+
+setDefaultBreakpoints([
+  { xsmall: 0 },
+  { small: 376 },
+  { medium: 650 }
+]);
+
 
 const Header = ({ handleMenuClick, activeSection }) => {
   const [showMenu, setShowMenu] = useState(false)
