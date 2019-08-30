@@ -12,6 +12,7 @@ const Contact = ({ setActiveSection }) => {
         id="contact-form"
         name="contact"
         method='post'
+        action="/message-sent"
       >
         <p>
           You can get in touch using <strong>team[at]longbound[dot]com</strong> or via the form below.

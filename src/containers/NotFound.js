@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Header, Image } from 'semantic-ui-react'
 import alerts from '../img/alerts.png'
 
 
-const NotFound = () => {
+const NotFound = ({ setActiveSection }) => {
+  useEffect(() => {
+    setActiveSection("404")
+  }, [setActiveSection])
+
   return (
     <div className="main">
       <Image src={alerts} size='small' centered />

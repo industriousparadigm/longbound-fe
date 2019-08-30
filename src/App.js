@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { BreakpointProvider, Breakpoint } from 'react-socks';
-// import { setDefaultBreakpoints } from 'react-socks';
 
 import Header from './containers/Header'
 import Footer from './containers/Footer'
@@ -11,18 +10,20 @@ import Contact from './containers/Contact'
 import Work from './containers/Work'
 import SideText from './containers/SideText'
 import NotFound from './containers/NotFound'
+import FormSent from './containers/NotFound'
 
 import './App.css'
-
-// setDefaultBreakpoints([
-//   { small: 100 },
-//   { medium: 376 },
-//   { large: 576 }
-// ]);
 
 
 const quotesURL = 'https://longbound-aff6.restdb.io/rest/quotes'
 const apiKey = process.env.REACT_APP_RESTDB_KEY
+
+const getQuotes = () => fetch(quotesURL, {
+  headers: {
+    'Content-Type': 'application/json',
+    'x-apikey': apiKey
+  }
+}).then(res => res.json())
 
 
 const App = () => {
@@ -33,16 +34,7 @@ const App = () => {
     !quotes && getQuotes().then(setQuotes)
   }, [quotes])
 
-  const handleMenuClick = ({ target }) => {
-    setActiveSection(target.text)
-  }
-
-  const getQuotes = () => fetch(quotesURL, {
-    headers: {
-      'Content-Type': 'application/json',
-      'x-apikey': apiKey
-    }
-  }).then(res => res.json())
+  const handleMenuClick = ({ target }) => setActiveSection(target.text)
 
   const sideText = () => {
     switch (activeSection) {
@@ -52,6 +44,10 @@ const App = () => {
         return "What we do"
       case "Contact":
         return "Get in touch"
+      case "404":
+        return "404 error"
+      case "Form sent":
+        return "Message sent"
       default:
         return ""
     }
@@ -69,7 +65,8 @@ const App = () => {
           <Route exact path='/about' render={(props) => <About {...props} setActiveSection={setActiveSection} />} />
           <Route exact path='/work' render={(props) => <Work {...props} setActiveSection={setActiveSection} />} />
           <Route exact path='/contact' render={(props) => <Contact {...props} setActiveSection={setActiveSection} />} />
-          <Route component={NotFound} />
+          <Route exact path='/message-sent' render={(props) => <FormSent {...props} setActiveSection={setActiveSection} />} />
+          <Route render={(props) => <NotFound {...props} setActiveSection={setActiveSection} />} />
         </Switch>
         <Footer />
       </BreakpointProvider>
