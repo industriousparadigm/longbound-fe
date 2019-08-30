@@ -122,6 +122,16 @@ ol > * {
     line-height: 1.4285em;
 }
 
+.work-list {
+    margin: 0 auto;
+}
+
+ol > * {
+    font-size: 3vw;
+    line-height: 1.4285em;
+    text-align: left;
+}
+
 textarea.materialize-textarea {
     height: 10rem;
 }
@@ -147,22 +157,6 @@ textarea.materialize-textarea {
     box-shadow: 0 1px 0 0 #000 !important;
 }
 
-.side-text-container {
-    top: 28vh;
-    left: 0;
-    position: fixed;
-    height: 100%;
-    margin: 0;
-    text-align: left;
-}
-
-.side-text {
-    transform: translateX(-33%);
-    writing-mode: vertical-lr;
-    font-size: 4vh !important;
-    right: 0;
-}
-
 @media only screen and (min-width: 576px) {
     h1 {
         font-size: 5.5vh !important;
@@ -178,14 +172,12 @@ textarea.materialize-textarea {
         font-size: 2.2vh;
     }
 
-    .about-list {
+    .work-list {
         width: 80%;
-        margin: 0 auto;
     }
 
     ol > * {
         font-size: 2.2vh;
-        line-height: 1.4285em;
     }
 
     .main {

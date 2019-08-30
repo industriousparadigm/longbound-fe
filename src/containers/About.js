@@ -6,7 +6,6 @@ import faces from '../img/faces.png'
 const About = ({ aboutScrollHandler }) => {
   return (
     <div className="main">
-      {/* <SideText text="Who we are" /> */}
       <Header as='h2' className='section-header'>
         Creative solutions are not stumbled upon by accident, nor realized by lone geniuses. They come from synergistic teams that apply the right methods and attitudes.
       </Header>
@@ -50,25 +49,6 @@ const About = ({ aboutScrollHandler }) => {
         <p>
           We work as a team and as brothers, and collaborate with people that can bring even more expertise to the table.
         </p>
-      </section>
-
-      <br />
-      <Header as='h2' className='section-header' style={{ "marginTop": "6vh" }}>
-        Longbound helps people and organizations to become more innovative by identifying, creating and realizing growth opportunities through innovation.
-      </Header>
-
-      <section className="about-list">
-        <ol>
-          <li>Improve systems, products and/or services
-            <ol type="a">
-              <li>Solve “unsolvable problems”</li>
-              <li>Expose and resolve bottlenecks and failures</li>
-              <li>Reduce costs</li>
-            </ol>
-          </li>
-          <li>Develop new innovative concepts and new market segments</li>
-          <li>Forecast the evolution of products, services and technologies</li>
-        </ol>
       </section>
     </div>
   )

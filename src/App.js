@@ -16,7 +16,6 @@ import './App.css'
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('')
-  const [aboutText,] = useState('What we do')
 
   const handleMenuClick = ({ target }) => {
     setActiveSection(target.text)
@@ -25,18 +24,14 @@ const App = () => {
   const sideText = () => {
     switch (activeSection) {
       case "About":
-        return aboutText
+        return "Who we are"
       case "Work":
-        return "Our work"
+        return "What we do"
       case "Contact":
         return "Get in touch"
       default:
         return ""
     }
-  }
-
-  const aboutScrollHandler = (event) => {
-    console.log(event.clientX)
   }
 
   return (
@@ -48,11 +43,7 @@ const App = () => {
         </Breakpoint>
         <Switch>
           <Route exact path='/' component={Landing} />
-          <Route
-            exact
-            path='/about'
-            render={(props) => <About {...props} onScroll={aboutScrollHandler} />}
-          />
+          <Route exact path='/about' component={About} />
           <Route exact path='/work' component={Work} />
           <Route exact path='/contact' component={Contact} />
           <Route component={NotFound} />
