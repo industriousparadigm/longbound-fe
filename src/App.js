@@ -57,6 +57,7 @@ const App = () => {
     <Router>
       <BreakpointProvider>
         <Header handleMenuClick={handleMenuClick} activeSection={activeSection} />
+        <div id="header-bg"></div>
         <Breakpoint medium up>
           <SideText text={sideText()} />
         </Breakpoint>
