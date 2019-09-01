@@ -220,6 +220,7 @@ textarea.materialize-textarea {
         position: fixed;
         top: 0;
         z-index: 98;
+        width: 100%;
     }
 
     #header-bg {
@@ -295,5 +296,9 @@ textarea.materialize-textarea {
     html, body {
         margin: 0 auto;
         max-width: 1300px;
+    }
+
+    #header {
+        width: 1300px;
     }
 }
