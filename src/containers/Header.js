@@ -39,40 +39,43 @@ const Header = ({ handleMenuClick, activeSection }) => {
     </div>
 
   return (
-    <div id="header">
-      <Breakpoint small down>
-        <Link to='/' onClick={handleMenuClick}>
-          <img
-            id="longbound-logo"
-            alt="longbound logo"
-            src={logo}
-          />
-        </Link>
-        <br />
-        <div id="menu-toggle" onClick={toggleMenu}>
-          <div className={`${showMenu ? "change" : ""} bar1`}></div>
-          <div className={`${showMenu ? "change" : ""} bar2`}></div>
-          <div className={`${showMenu ? "change" : ""} bar3`}></div>
-        </div>
+    <>
+      <div id="header-bg"></div>
 
-        {showMenu && <Menu isMobile={true} />}
-      </Breakpoint>
-      <Breakpoint medium up>
-        <div id="desktop-menu">
-          <div id="logo-box">
-            <Link to='/' onClick={handleMenuClick}>
-              <img
-                id="longbound-logo-desktop"
-                alt="longbound logo"
-                src={logo}
-              />
-            </Link>
+      <div id="header">
+        <Breakpoint small down>
+          <Link to='/' onClick={handleMenuClick}>
+            <img
+              id="longbound-logo"
+              alt="longbound logo"
+              src={logo}
+            />
+          </Link>
+          <br />
+          <div id="menu-toggle" onClick={toggleMenu}>
+            <div className={`${showMenu ? "change" : ""} bar1`}></div>
+            <div className={`${showMenu ? "change" : ""} bar2`}></div>
+            <div className={`${showMenu ? "change" : ""} bar3`}></div>
           </div>
-          <Menu isMobile={false} />
-        </div>
-      </Breakpoint>
-    </div>
 
+          {showMenu && <Menu isMobile={true} />}
+        </Breakpoint>
+        <Breakpoint medium up>
+          <div id="desktop-menu">
+            <div id="logo-box">
+              <Link to='/' onClick={handleMenuClick}>
+                <img
+                  id="longbound-logo-desktop"
+                  alt="longbound logo"
+                  src={logo}
+                />
+              </Link>
+            </div>
+            <Menu isMobile={false} />
+          </div>
+        </Breakpoint>
+      </div>
+    </>
   )
 }
 

@@ -4,4 +4,6 @@ Longbound is a creative R&D and Front-end Innovation team imagining and inventin
 
 ### Specs
 
-React front-end with Semantic UI React and React Router.
+Responsive website built using React + Materialize CSS, React Hooks, React Router, React Socks.
+
+Deployed in September 2019 using Netlify at https://www.longbound.com
