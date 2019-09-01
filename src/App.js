@@ -47,7 +47,7 @@ const App = () => {
       case "404":
         return "404 error"
       case "Form sent":
-        return "Message sent"
+        return "Thank you"
       default:
         return ""
     }
@@ -65,7 +65,7 @@ const App = () => {
           <Route exact path='/about' render={(props) => <About {...props} setActiveSection={setActiveSection} />} />
           <Route exact path='/work' render={(props) => <Work {...props} setActiveSection={setActiveSection} />} />
           <Route exact path='/contact' render={(props) => <Contact {...props} setActiveSection={setActiveSection} />} />
-          <Route exact path='/message-sent' render={(props) => <FormSent {...props} setActiveSection={setActiveSection} />} />
+          <Route exact path='/contact/success' render={(props) => <FormSent {...props} setActiveSection={setActiveSection} />} />
           <Route render={(props) => <NotFound {...props} setActiveSection={setActiveSection} />} />
         </Switch>
         <Footer />

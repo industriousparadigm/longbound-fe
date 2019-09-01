@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import logo from '../img/longbound-logo.png'
 import { Link } from 'react-router-dom'
-import { Icon } from 'semantic-ui-react'
 import { Breakpoint, setDefaultBreakpoints } from 'react-socks'
+
 
 setDefaultBreakpoints([
   { xsmall: 0 },
@@ -48,15 +48,14 @@ const Header = ({ handleMenuClick, activeSection }) => {
             src={logo}
           />
         </Link>
+        <br />
         <div id="menu-toggle" onClick={toggleMenu}>
-          <Icon name='circle' size='large' />
-          <Icon name='circle' size='large' />
-          <Icon name='circle' size='large' />
+          <div className={`${showMenu ? "change" : ""} bar1`}></div>
+          <div className={`${showMenu ? "change" : ""} bar2`}></div>
+          <div className={`${showMenu ? "change" : ""} bar3`}></div>
         </div>
 
-        {
-          showMenu && <Menu isMobile={true} />
-        }
+        {showMenu && <Menu isMobile={true} />}
       </Breakpoint>
       <Breakpoint medium up>
         <div id="desktop-menu">

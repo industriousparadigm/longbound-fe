@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Header, Image } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import backIcon from '../img/back-icon.png'
 
 const FormSent = ({ setActiveSection }) => {
@@ -12,12 +13,13 @@ const FormSent = ({ setActiveSection }) => {
       <Header as='h2' className='section-header'>
         Thank you for contacting us
       </Header>
-      <section className="body-text">
+      <section className="work-list">
         <p>
           We will be in touch shortly.
         </p>
       </section>
-      <Image src={backIcon} size='small' centered />
+      <br />
+      <Image src={backIcon} size='tiny' centered as={Link} to='/contact' />
     </div>
   )
 }

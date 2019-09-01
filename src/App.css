@@ -21,44 +21,6 @@
     font-size: 2.5vw;
 }
 
-#menu {
-    padding-top: 2vh;
-    display: flex;
-    height: auto;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-#menu-toggle {
-    padding-top: 3vh;
-}
-
-#menu a {
-    margin: 1vh;
-    color: black;
-}
-
-#menu a:hover {
-    color: #555;
-    text-decoration: underline !important;
-}
-
-.menu-option {
-    font-size: 4vh;
-    padding: 1vh 0;
-}
-
-.selected {
-    text-decoration: underline;
-}
-
-#longbound-logo {
-    max-width: 80%;
-    height: auto;
-    max-height: 300px;
-}
-
 h1 {
     font-size: 6vw !important;
     margin-bottom: 6vh !important;
@@ -155,6 +117,69 @@ textarea.materialize-textarea {
 .input-field textarea:focus {
     border-bottom: 1px solid #000 !important;
     box-shadow: 0 1px 0 0 #000 !important;
+}
+
+#menu {
+    padding-top: 2vh;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#menu a {
+    margin: 1vh;
+    color: black;
+}
+
+#menu a:hover {
+    color: #555;
+    text-decoration: underline !important;
+}
+
+#menu-toggle {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-option {
+    font-size: 2.8vh;
+    padding: 1vh 0;
+}
+
+.selected {
+    text-decoration: underline;
+}
+
+#longbound-logo {
+    max-width: 80%;
+    height: auto;
+    max-height: 300px;
+}
+
+/* hamburguer menu stuff */
+
+.bar1, .bar2, .bar3 {
+    width: 50px;
+    height: 9px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change.bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 8px);
+    transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.change.bar2 {
+    opacity: 0;
+}
+
+.change.bar3 {
+    -webkit-transform: rotate(45deg) translate(-13px, -13px);
+    transform: rotate(45deg) translate(-13px, -13px);
 }
 
 @media only screen and (min-width: 650px) {
