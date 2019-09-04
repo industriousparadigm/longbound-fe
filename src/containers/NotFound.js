@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Header, Image } from 'semantic-ui-react'
 import alerts from '../img/alerts.png'
 
-
+// 404
 const NotFound = ({ setActiveSection }) => {
   useEffect(() => {
     setActiveSection("404")
