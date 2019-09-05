@@ -7,7 +7,7 @@ import Footer from './containers/Footer'
 import Landing from './containers/Landing'
 import About from './containers/About'
 import Contact from './containers/Contact'
-import Work from './containers/Work'
+import Services from './containers/Services'
 import SideText from './containers/SideText'
 import NotFound from './containers/NotFound'
 import FormSent from './containers/FormSent'
@@ -40,7 +40,7 @@ const App = () => {
     switch (activeSection) {
       case "About":
         return "Who we are"
-      case "Work":
+      case "Services":
         return "What we do"
       case "Contact":
         return "Get in touch"
@@ -63,7 +63,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' render={(props) => <Landing {...props} quotes={quotes} />} />
           <Route exact path='/about' render={(props) => <About {...props} setActiveSection={setActiveSection} />} />
-          <Route exact path='/work' render={(props) => <Work {...props} setActiveSection={setActiveSection} />} />
+          <Route exact path='/services' render={(props) => <Services {...props} setActiveSection={setActiveSection} />} />
           <Route exact path='/contact' render={(props) => <Contact {...props} setActiveSection={setActiveSection} />} />
           <Route exact path='/contact/success' render={(props) => <FormSent {...props} setActiveSection={setActiveSection} />} />
           <Route render={(props) => <NotFound {...props} setActiveSection={setActiveSection} />} />

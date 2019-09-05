@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
-import { Header, Image } from 'semantic-ui-react'
-import schema from '../img/key activities.png'
-// import faces from '../img/faces.png'
+import { Header } from 'semantic-ui-react'
 
 const About = ({ setActiveSection }) => {
 
@@ -15,38 +13,12 @@ const About = ({ setActiveSection }) => {
         Creative solutions are not stumbled upon by accident, nor realized by lone geniuses. They come from synergistic teams that apply the right methods and attitudes.
       </Header>
 
-      <Image src={schema} id="schema-picture" className="body-image" alt="Longbound methodology" />
-      {/* <Image
-        src={faces}
-        id="faces-picture"
-        className="body-image"
-        alt="Longbound Bros"
-      /> */}
-      {/* <div id="name-tags">
-        <div className="name-tag">
-          <Header as='h3' style={{ "marginBottom": "0.6vh" }}>
-            Bernardo
-          </Header>
-          <span> <em>designer</em> </span>
-        </div>
-        <div className="name-tag">
-          <Header as='h3' style={{ "marginBottom": "0.6vh" }}>
-            Diogo
-          </Header>
-          <span> <em>engineer</em> </span>
-        </div>
-      </div> */}
-
-
       <section className="body-text">
         <p>
           We use our expertise in creativity, design and new product development to help imagining and inventing a better future for everyone.
         </p>
         <p>
           Our complementary skillsets and background in design and engineering with our systematic approach, creativity and facilitating capabilities, enable a unique perspective to projects with a broad vision and solutions.
-        </p>
-        <p>
-          We follow a model structure that is adapted based on the specificities of the project with different tools and methodologies.
         </p>
         <p>
           We want to empower companies with new ideas and opportunities to improve their innovation output. We can help in looking at new frames and/or propose solutions after a careful and systematic process.

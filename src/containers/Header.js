@@ -26,16 +26,23 @@ const Header = ({ handleMenuClick, activeSection }) => {
         className={getMenuOptionClass("About")}
         to="/about"
         onClick={handleMenuClick}
-      >About</Link>
+      >
+        About
+      </Link>
       <Link
-        className={getMenuOptionClass("Work")}
-        to="/work"
+        className={getMenuOptionClass("Services")}
+        to="/services"
         onClick={handleMenuClick}
-      >Work</Link>
+      >
+        Services
+      </Link>
       <Link
         className={getMenuOptionClass("Contact")}
         to="/contact"
-        onClick={handleMenuClick}>Contact</Link>
+        onClick={handleMenuClick}
+      >
+        Contact
+      </Link>
     </div>
 
   return (

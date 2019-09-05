@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { Header } from 'semantic-ui-react'
+import { Header, Image } from 'semantic-ui-react'
+import schema from '../img/key activities LB.png'
 
-
-const Work = ({ setActiveSection }) => {
+const Services = ({ setActiveSection }) => {
   useEffect(() => {
-    setActiveSection("Work")
+    setActiveSection("Services")
   }, [setActiveSection])
 
   return (
@@ -13,7 +13,10 @@ const Work = ({ setActiveSection }) => {
         Longbound helps people and organizations to become more innovative by identifying, creating and realizing growth opportunities through innovation.
       </Header>
 
-      <section className="work-list">
+      <Image src={schema} id="schema-picture" className="body-image" alt="Longbound methodology" />
+
+
+      <section className="services-list">
         <ol>
           <li>Improve systems, products and/or services
             <ol type="a">
@@ -27,8 +30,17 @@ const Work = ({ setActiveSection }) => {
         </ol>
       </section>
 
+      <br />
+
+      <section className="body-text">
+        <p>
+          We follow a model structure that is adapted based on the specificities of the project with different tools and methodologies.
+        </p>
+      </section>
+
+
     </div>
   )
 }
 
-export default Work
+export default Services
