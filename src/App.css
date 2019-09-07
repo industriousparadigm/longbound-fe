@@ -184,21 +184,21 @@ textarea.materialize-textarea {
 }
 
 #linkedin-logo-link:link {
-    opacity: .5;
-    transition: .22s;
-}
-
-#linkedin-logo-link:visited {
-    opacity: .5;
-}
-
-#linkedin-logo-link:hover {
     opacity: 1;
     transition: .22s;
 }
 
+#linkedin-logo-link:visited {
+    opacity: 1;
+}
+
+#linkedin-logo-link:hover {
+    opacity: .75;
+    transition: .22s;
+}
+
 #linkedin-logo-link:active {
-    opacity: .8;
+    opacity: .4;
 }
 
 @media only screen and (min-width: 650px) {
