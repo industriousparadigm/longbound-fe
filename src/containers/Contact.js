@@ -1,4 +1,8 @@
 import React, { useEffect } from 'react'
+import { Icon } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
+
+const LINKEDIN_URL = "https://www.linkedin.com/company/longbound/"
 
 const Contact = ({ setActiveSection }) => {
 
@@ -14,7 +18,12 @@ const Contact = ({ setActiveSection }) => {
         method='post'
       >
         <p>
-          You can get in touch using <strong>team[at]longbound[dot]com</strong> or via the form below.
+          You can connect with us on <a href={LINKEDIN_URL} target="none" >
+            <Icon
+              link
+              name='linkedin'
+              size='large'
+            /></a>, email us at <strong>team[at]longbound[dot]com</strong> or write to us using the form below.
         </p>
         <br />
 
