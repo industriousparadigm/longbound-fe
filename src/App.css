@@ -183,6 +183,24 @@ textarea.materialize-textarea {
     transform: rotate(45deg) translate(-13px, -13px);
 }
 
+#linkedin-logo-link:link {
+    opacity: .5;
+    transition: .22s;
+}
+
+#linkedin-logo-link:visited {
+    opacity: .5;
+}
+
+#linkedin-logo-link:hover {
+    opacity: 1;
+    transition: .22s;
+}
+
+#linkedin-logo-link:active {
+    opacity: .8;
+}
+
 @media only screen and (min-width: 650px) {
     h1 {
         font-size: 5.5vh !important;

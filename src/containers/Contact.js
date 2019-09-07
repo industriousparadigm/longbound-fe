@@ -18,9 +18,8 @@ const Contact = ({ setActiveSection }) => {
         method='post'
       >
         <p>
-          You can connect with us on <a href={LINKEDIN_URL} target="none" >
+          You can connect with us on <a id="linkedin-logo-link" href={LINKEDIN_URL} target="none" >
             <Icon
-              link
               name='linkedin'
               size='large'
             /></a>, email us at <strong>team[at]longbound[dot]com</strong> or write to us using the form below.
