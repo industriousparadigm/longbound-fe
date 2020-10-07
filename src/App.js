@@ -15,12 +15,13 @@ import FormSent from './containers/FormSent';
 import './App.css';
 
 const quotesURL = 'https://longbound-aff6.restdb.io/rest/quotes';
+const apiKey = process.env.REACT_APP_RESTDB_KEY;
 
 const getQuotes = () =>
   fetch(quotesURL, {
     headers: {
       'Content-Type': 'application/json',
-      'x-apikey': process.env.REACT_APP_RESTDB_KEY,
+      'x-apikey': apiKey,
     },
   }).then((res) => res.json());
 
