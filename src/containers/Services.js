@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Header, Image } from 'semantic-ui-react';
-import schema from '../img/key activities LB.png';
+import schema from '../img/key-activities-innovbros-trim.png';
 
 const Services = ({ setActiveSection }) => {
   useEffect(() => {
