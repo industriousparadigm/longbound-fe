@@ -1,9 +1,9 @@
-## Longbound website
+## The Innovation Brothers website
 
-Longbound is a creative R&D and Front-end Innovation team imagining and inventing a better future.
+The Innovation Brothers is a creative R&D and Front-end Innovation team imagining and inventing a better future.
 
 ### Specs
 
 Responsive website built using React + Materialize CSS, React Hooks, React Router, React Socks.
 
-Deployed in September 2019 using Netlify at https://www.longbound.com
+First deployed in September 2019 using Netlify at https://www.theinnovationbrothers.com

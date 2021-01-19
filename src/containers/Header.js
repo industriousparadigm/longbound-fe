@@ -1,49 +1,46 @@
-import React, { useState } from 'react'
-import logo from '../img/longbound-logo.png'
-import { Link } from 'react-router-dom'
-import { Breakpoint, setDefaultBreakpoints } from 'react-socks'
+import React, { useState } from 'react';
+import logo from '../img/theinnovationbrothers-logo.png';
+import { Link } from 'react-router-dom';
+import { Breakpoint, setDefaultBreakpoints } from 'react-socks';
 
-
-setDefaultBreakpoints([
-  { xsmall: 0 },
-  { small: 376 },
-  { medium: 650 }
-]);
-
+setDefaultBreakpoints([{ xsmall: 0 }, { small: 376 }, { medium: 650 }]);
 
 const Header = ({ handleMenuClick, activeSection }) => {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
 
-  const toggleMenu = () => setShowMenu(!showMenu)
+  const toggleMenu = () => setShowMenu(!showMenu);
 
-  const getMenuOptionClass = sectionName => {
-    return activeSection === sectionName ? "selected menu-option" : "menu-option"
-  }
+  const getMenuOptionClass = (sectionName) => {
+    return activeSection === sectionName
+      ? 'selected menu-option'
+      : 'menu-option';
+  };
 
-  const Menu = ({ isMobile }) =>
+  const Menu = ({ isMobile }) => (
     <div id={isMobile ? 'menu' : 'menu-options'}>
       <Link
-        className={getMenuOptionClass("About")}
+        className={getMenuOptionClass('About')}
         to="/about"
         onClick={handleMenuClick}
       >
         About
       </Link>
       <Link
-        className={getMenuOptionClass("Services")}
+        className={getMenuOptionClass('Services')}
         to="/services"
         onClick={handleMenuClick}
       >
         Services
       </Link>
       <Link
-        className={getMenuOptionClass("Contact")}
+        className={getMenuOptionClass('Contact')}
         to="/contact"
         onClick={handleMenuClick}
       >
         Contact
       </Link>
     </div>
+  );
 
   return (
     <>
@@ -51,18 +48,14 @@ const Header = ({ handleMenuClick, activeSection }) => {
 
       <div id="header">
         <Breakpoint small down>
-          <Link to='/' onClick={handleMenuClick}>
-            <img
-              id="longbound-logo"
-              alt="longbound logo"
-              src={logo}
-            />
+          <Link to="/" onClick={handleMenuClick}>
+            <img id="logo" alt="the innovation brothers logo" src={logo} />
           </Link>
           <br />
           <div id="menu-toggle" onClick={toggleMenu}>
-            <div className={`${showMenu ? "change" : ""} bar1`}></div>
-            <div className={`${showMenu ? "change" : ""} bar2`}></div>
-            <div className={`${showMenu ? "change" : ""} bar3`}></div>
+            <div className={`${showMenu ? 'change' : ''} bar1`}></div>
+            <div className={`${showMenu ? 'change' : ''} bar2`}></div>
+            <div className={`${showMenu ? 'change' : ''} bar3`}></div>
           </div>
 
           {showMenu && <Menu isMobile={true} />}
@@ -70,10 +63,10 @@ const Header = ({ handleMenuClick, activeSection }) => {
         <Breakpoint medium up>
           <div id="desktop-menu">
             <div id="logo-box">
-              <Link to='/' onClick={handleMenuClick}>
+              <Link to="/" onClick={handleMenuClick}>
                 <img
-                  id="longbound-logo-desktop"
-                  alt="longbound logo"
+                  id="logo-desktop"
+                  alt="the innovation brothers logo"
                   src={logo}
                 />
               </Link>
@@ -83,7 +76,7 @@ const Header = ({ handleMenuClick, activeSection }) => {
         </Breakpoint>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

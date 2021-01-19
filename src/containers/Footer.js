@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
     <div id="footer">
-      <p>Copyright &copy; 2019 Longbound
-      <br />All rights reserved.</p>
+      <p>
+        {`Copyright © ${new Date().getFullYear()} The Innovation Brothers`}
+        <br />
+        All rights reserved.
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

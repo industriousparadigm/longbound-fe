@@ -16,8 +16,8 @@ const Contact = ({ setActiveSection }) => {
           <a id="linkedin-logo-link" href={LINKEDIN_URL} target="none">
             <Icon name="linkedin" size="large" />
           </a>
-          , email us at <strong>team[at]longbound[dot]com</strong> or write to
-          us using the form below.
+          , email us at <strong>team[at]theinnovationbrothers[dot]com</strong>{' '}
+          or write to us using the form below.
         </p>
         <br />
 
